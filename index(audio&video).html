@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Learner - Question Bank & GK Quiz</title>
+    <style>
+      /* #DC143C
+#00BEFF
+#923D88 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #34495e;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .subjects a {
+            display: block;
+            background: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .quiz-box {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .options div {
+            background: #ecf0f1;
+            padding: 10px;
+            margin: 8px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tech Learner Pvt. Ltd.</h1>
+    <p>Your Learning. Your Way.</p>
+</header>
+
+<nav>
+    <a href="#subjects">Subjects</a>
+    <a href="#quiz">GK Quiz</a>
+    <a href="#query">Query Form</a>
+</nav>
+
+<div class="container">
+
+
+    <section id="quiz" class="quiz-box">
+        <h2>General Knowledge Quiz</h2>
+        <p><strong>Q1:</strong> Which is the largest planet in the Solar System?</p>
+        <div class="options">
+            <div onclick="checkAnswer(this, false)">Earth</div>
+            <div onclick="checkAnswer(this, true)">Jupiter</div>
+            <div onclick="checkAnswer(this, false)">Mars</div>
+            <div onclick="checkAnswer(this, false)">Venus</div>
+        </div>
+
+        <p><strong>Q2:</strong> Who wrote the National Anthem of India?</p>
+        <div class="options">
+            <div onclick="checkAnswer(this, true)">Rabindranath Tagore</div>
+            <div onclick="checkAnswer(this, false)">Sarojini Naidu</div>
+            <div onclick="checkAnswer(this, false)">Bankim Chandra Chatterjee</div>
+            <div onclick="checkAnswer(this, false)">Mahatma Gandhi</div>
+        </div>
+    </section>
+
+    <section id="query">
+        <h2>Student Query Form</h2>
+        <form>
+            <label>Full Name:</label>
+            <input type="text" required>
+
+            <label>Email:</label>
+            <input type="email" required>
+
+            <label>Your Query:</label>
+            <textarea rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</div>
+
+<script>
+function checkAnswer(option, isCorrect) {
+    if (isCorrect) {
+        alert("Correct Answer! Great job!");
+        option.style.background = "#2ecc71";
+    } else {
+        alert("Incorrect Answer! Try again.");
+        option.style.background = "#e74c3c";
+    }
+}
+</script>
+
+</body>
+</html>
